@@ -136,7 +136,7 @@ const generateTeam = () => {
    if(!fs.existsSync(OUTPUT_DIR)) {
     fs.mkdirSync(OUTPUT_DIR)
    }
-   fs.writeFileSync(outputPath, pageTemplate(teamMembers), "utf-8"); //is the utf-8 needed??
+   fs.writeFileSync(outputPath, pageTemplate(teamMembers), "utf-8"); 
 }
 
 questionsManager();
