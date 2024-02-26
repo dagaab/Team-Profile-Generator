@@ -21,7 +21,7 @@ const questionsManager = () => {
     {
         type: "input",
         name: "nameOfManager",
-        message: "What is your name?",
+        message: "Please enter the team's manager name:",
     },
     {
         type: "input",
@@ -40,7 +40,6 @@ const questionsManager = () => {
     },
    
 ]).then(answers => {
-    console.log(answers);
     const manager = new Manager(answers.nameOfManager, answers.managersID, answers.managersEmail, answers.officeNumber);
     teamMembers.push(manager);
     listMenu();
@@ -96,7 +95,6 @@ const questionsEngineer = () => {
         message: "What is the new engineer's GitHub username?",
     },
     ]).then(answers => {
-        console.log(answers);
         const engineer =  new Engineer(answers.nameOfEngineer, answers.engineersID, answers.engineersEmail, answers.engineersGithub);
         teamMembers.push(engineer);
         listMenu();
@@ -127,7 +125,6 @@ const questionsIntern = () => {
         message: "What is the new intern's School?",
     },
     ]).then(answers => {
-        console.log(answers);
         const intern = new Intern(answers.nameOfIntern, answers.internsID, answers.internsEmail, answers.internsSchool);
         teamMembers.push(intern);
         listMenu();
