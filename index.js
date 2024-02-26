@@ -15,6 +15,7 @@ const pageTemplate = require("./src/page-template.js");
 // TODO: Write Code to gather information about the development team members, and render the HTML file.
 const teamMembers = [];
 
+// Manager's questions
 const questionsManager = () => {
     return inquirer.prompt([
     {
@@ -46,6 +47,7 @@ const questionsManager = () => {
 })
 };
 
+// Choice menu:
 const listMenu = () => {
     return inquirer.prompt([
     {
@@ -70,6 +72,7 @@ const listMenu = () => {
 });
 };
 
+// Engineer's questions:
 const questionsEngineer = () => {
     return inquirer.prompt([
     {
@@ -100,6 +103,7 @@ const questionsEngineer = () => {
     })
 };
 
+//Intern's Questions:
 const questionsIntern = () => {
     return inquirer.prompt([
     {
@@ -130,15 +134,18 @@ const questionsIntern = () => {
     })
 };
 
+
+// function to write HTML file
 const generateTeam = () => {
    console.log(`---- Team Profile is ready! ----`);
 
    if(!fs.existsSync(OUTPUT_DIR)) {
     fs.mkdirSync(OUTPUT_DIR)
    }
-   fs.writeFileSync(outputPath, pageTemplate(teamMembers), "utf-8"); 
+   fs.writeFileSync(outputPath, pageTemplate(teamMembers)); 
 }
 
+// function call to initialize program
 questionsManager();
 
 
