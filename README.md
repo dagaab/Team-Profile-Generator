@@ -15,11 +15,14 @@
 
   ## Installation
   Open the terminal and use node in the command line
+  
 
   ## Usage
   By answering questions you can create a Team Profile
   
   ![Team-Profile](./assets/command-line.png "Usage")
+
+  A walkthrough video - https://www.youtube.com/watch?v=nJtAI_eWIg8
 
   ## Contributing
   Everyone is welcomed to contribute to this project
